@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		455563E2199664B900AD9DFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455563E1199664B900AD9DFC /* AppDelegate.swift */; };
-		455563E4199664B900AD9DFC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455563E3199664B900AD9DFC /* ViewController.swift */; };
+		455563E4199664B900AD9DFC /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455563E3199664B900AD9DFC /* SearchResultsViewController.swift */; };
 		455563E7199664B900AD9DFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 455563E5199664B900AD9DFC /* Main.storyboard */; };
 		455563E9199664B900AD9DFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455563E8199664B900AD9DFC /* Images.xcassets */; };
-		455563F5199664B900AD9DFC /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455563F4199664B900AD9DFC /* HelloWorldTests.swift */; };
+		455563F5199664B900AD9DFC /* GithubUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455563F4199664B900AD9DFC /* GithubUserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,15 +25,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		455563DC199664B900AD9DFC /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		455563DC199664B900AD9DFC /* GithubUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		455563E0199664B900AD9DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		455563E1199664B900AD9DFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		455563E3199664B900AD9DFC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		455563E3199664B900AD9DFC /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		455563E6199664B900AD9DFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		455563E8199664B900AD9DFC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		455563EE199664B900AD9DFC /* HelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		455563EE199664B900AD9DFC /* GithubUserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubUserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		455563F3199664B900AD9DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		455563F4199664B900AD9DFC /* HelloWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldTests.swift; sourceTree = "<group>"; };
+		455563F4199664B900AD9DFC /* GithubUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +57,8 @@
 		455563D3199664B800AD9DFC = {
 			isa = PBXGroup;
 			children = (
-				455563DE199664B900AD9DFC /* HelloWorld */,
-				455563F1199664B900AD9DFC /* HelloWorldTests */,
+				455563DE199664B900AD9DFC /* GithubUser */,
+				455563F1199664B900AD9DFC /* GithubUserTests */,
 				455563DD199664B900AD9DFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,22 +66,22 @@
 		455563DD199664B900AD9DFC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				455563DC199664B900AD9DFC /* HelloWorld.app */,
-				455563EE199664B900AD9DFC /* HelloWorldTests.xctest */,
+				455563DC199664B900AD9DFC /* GithubUser.app */,
+				455563EE199664B900AD9DFC /* GithubUserTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		455563DE199664B900AD9DFC /* HelloWorld */ = {
+		455563DE199664B900AD9DFC /* GithubUser */ = {
 			isa = PBXGroup;
 			children = (
 				455563E1199664B900AD9DFC /* AppDelegate.swift */,
-				455563E3199664B900AD9DFC /* ViewController.swift */,
+				455563E3199664B900AD9DFC /* SearchResultsViewController.swift */,
 				455563E5199664B900AD9DFC /* Main.storyboard */,
 				455563E8199664B900AD9DFC /* Images.xcassets */,
 				455563DF199664B900AD9DFC /* Supporting Files */,
 			);
-			path = HelloWorld;
+			path = GithubUser;
 			sourceTree = "<group>";
 		};
 		455563DF199664B900AD9DFC /* Supporting Files */ = {
@@ -92,13 +92,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		455563F1199664B900AD9DFC /* HelloWorldTests */ = {
+		455563F1199664B900AD9DFC /* GithubUserTests */ = {
 			isa = PBXGroup;
 			children = (
-				455563F4199664B900AD9DFC /* HelloWorldTests.swift */,
+				455563F4199664B900AD9DFC /* GithubUserTests.swift */,
 				455563F2199664B900AD9DFC /* Supporting Files */,
 			);
-			path = HelloWorldTests;
+			path = GithubUserTests;
 			sourceTree = "<group>";
 		};
 		455563F2199664B900AD9DFC /* Supporting Files */ = {
@@ -112,9 +112,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		455563DB199664B800AD9DFC /* HelloWorld */ = {
+		455563DB199664B800AD9DFC /* GithubUser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 455563F8199664B900AD9DFC /* Build configuration list for PBXNativeTarget "HelloWorld" */;
+			buildConfigurationList = 455563F8199664B900AD9DFC /* Build configuration list for PBXNativeTarget "GithubUser" */;
 			buildPhases = (
 				455563D8199664B800AD9DFC /* Sources */,
 				455563D9199664B800AD9DFC /* Frameworks */,
@@ -124,14 +124,14 @@
 			);
 			dependencies = (
 			);
-			name = HelloWorld;
+			name = GithubUser;
 			productName = HelloWorld;
-			productReference = 455563DC199664B900AD9DFC /* HelloWorld.app */;
+			productReference = 455563DC199664B900AD9DFC /* GithubUser.app */;
 			productType = "com.apple.product-type.application";
 		};
-		455563ED199664B900AD9DFC /* HelloWorldTests */ = {
+		455563ED199664B900AD9DFC /* GithubUserTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 455563FB199664B900AD9DFC /* Build configuration list for PBXNativeTarget "HelloWorldTests" */;
+			buildConfigurationList = 455563FB199664B900AD9DFC /* Build configuration list for PBXNativeTarget "GithubUserTests" */;
 			buildPhases = (
 				455563EA199664B900AD9DFC /* Sources */,
 				455563EB199664B900AD9DFC /* Frameworks */,
@@ -142,9 +142,9 @@
 			dependencies = (
 				455563F0199664B900AD9DFC /* PBXTargetDependency */,
 			);
-			name = HelloWorldTests;
+			name = GithubUserTests;
 			productName = HelloWorldTests;
-			productReference = 455563EE199664B900AD9DFC /* HelloWorldTests.xctest */;
+			productReference = 455563EE199664B900AD9DFC /* GithubUserTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -165,7 +165,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 455563D7199664B800AD9DFC /* Build configuration list for PBXProject "HelloWorld" */;
+			buildConfigurationList = 455563D7199664B800AD9DFC /* Build configuration list for PBXProject "GithubUser" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -178,8 +178,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				455563DB199664B800AD9DFC /* HelloWorld */,
-				455563ED199664B900AD9DFC /* HelloWorldTests */,
+				455563DB199664B800AD9DFC /* GithubUser */,
+				455563ED199664B900AD9DFC /* GithubUserTests */,
 			);
 		};
 /* End PBXProject section */
@@ -208,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				455563E4199664B900AD9DFC /* ViewController.swift in Sources */,
+				455563E4199664B900AD9DFC /* SearchResultsViewController.swift in Sources */,
 				455563E2199664B900AD9DFC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,7 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				455563F5199664B900AD9DFC /* HelloWorldTests.swift in Sources */,
+				455563F5199664B900AD9DFC /* GithubUserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,7 +226,7 @@
 /* Begin PBXTargetDependency section */
 		455563F0199664B900AD9DFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 455563DB199664B800AD9DFC /* HelloWorld */;
+			target = 455563DB199664B800AD9DFC /* GithubUser */;
 			targetProxy = 455563EF199664B900AD9DFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -327,9 +327,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = HelloWorld/Info.plist;
+				INFOPLIST_FILE = GithubUser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GithubUser;
 			};
 			name = Debug;
 		};
@@ -338,9 +338,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = HelloWorld/Info.plist;
+				INFOPLIST_FILE = GithubUser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GithubUser;
 			};
 			name = Release;
 		};
@@ -358,7 +358,7 @@
 				);
 				INFOPLIST_FILE = HelloWorldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GithubUserTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -373,7 +373,7 @@
 				);
 				INFOPLIST_FILE = HelloWorldTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GithubUserTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -381,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		455563D7199664B800AD9DFC /* Build configuration list for PBXProject "HelloWorld" */ = {
+		455563D7199664B800AD9DFC /* Build configuration list for PBXProject "GithubUser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				455563F6199664B900AD9DFC /* Debug */,
@@ -390,21 +390,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		455563F8199664B900AD9DFC /* Build configuration list for PBXNativeTarget "HelloWorld" */ = {
+		455563F8199664B900AD9DFC /* Build configuration list for PBXNativeTarget "GithubUser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				455563F9199664B900AD9DFC /* Debug */,
 				455563FA199664B900AD9DFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		455563FB199664B900AD9DFC /* Build configuration list for PBXNativeTarget "HelloWorldTests" */ = {
+		455563FB199664B900AD9DFC /* Build configuration list for PBXNativeTarget "GithubUserTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				455563FC199664B900AD9DFC /* Debug */,
 				455563FD199664B900AD9DFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
