@@ -16,8 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="center" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sTr-gW-nsg">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="606"/>
+                            <tableView clipsSubviews="YES" contentMode="center" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="sTr-gW-nsg">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="lKa-Ee-piL"/>
@@ -29,7 +29,9 @@
                         <constraints>
                             <constraint firstItem="sTr-gW-nsg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="6TU-Ul-9DT"/>
                             <constraint firstAttribute="trailing" secondItem="sTr-gW-nsg" secondAttribute="trailing" constant="20" symbolic="YES" id="Dif-qP-w90"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sTr-gW-nsg" secondAttribute="bottom" constant="20" symbolic="YES" id="XJl-dc-fBy"/>
                             <constraint firstAttribute="bottom" secondItem="sTr-gW-nsg" secondAttribute="bottom" constant="20" symbolic="YES" id="nCr-YR-Dgs"/>
+                            <constraint firstItem="sTr-gW-nsg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="rvp-78-8NQ"/>
                             <constraint firstItem="sTr-gW-nsg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="vpQ-ve-iHd"/>
                         </constraints>
                     </view>
