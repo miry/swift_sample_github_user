@@ -13,7 +13,8 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
 
     var tableData = []
     var imageCache = [String : UIImage]()
-    var api = APIController()
+//    var api = APIController()
+    lazy var api : APIController = APIController(delegate: self)
     @IBOutlet weak var appsTableView: UITableView!
 
     
@@ -93,9 +94,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     }
     
     override func viewDidLoad() {
-        self.api.delegate = self
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         api.searchUserFor("miry")
     }
 
