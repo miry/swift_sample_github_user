@@ -11,7 +11,8 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegate, APIControllerProtocol {
     let kCellIdentifier: String = "SearchResultCell"
 
-    var tableData = []
+    var users = [Album]()
+
     var imageCache = [String : UIImage]()
 //    var api = APIController()
     lazy var api : APIController = APIController(delegate: self)
@@ -19,15 +20,15 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
 
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
+        return users.count
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
 //        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
         let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as UITableViewCell
         
-        let rowData: NSDictionary = self.tableData[indexPath.row] as NSDictionary
-        let login: String? = rowData["login"] as String?
+        let userRow: User = self.users[indexPath.row]
+        let login: String? = userRow.login
         
         // Add a check to make sure this exists
 
@@ -48,13 +49,9 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
                 if error == nil {
                     image = UIImage(data: data)
-                    
-                    
-                    println("Downloaded image \(imgURL)")
                     // Store the image in to our cache
                     self.imageCache[urlString] = image
                     if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
-                        println("Show the image in \(cellToUpdate)")
                         cellToUpdate.imageView.image = image
                     }
                 }
@@ -64,7 +61,6 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
             })
         } else {
             dispatch_async(dispatch_get_main_queue(), {
-                println("----- \(indexPath)")
                 if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
                     cellToUpdate.imageView.image = image
                 }
@@ -82,19 +78,20 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         // Get the row data for the selected row
-        var rowData: NSDictionary = self.tableData[indexPath.row] as NSDictionary
-        var alert: UIAlertView = UIAlertView()
-        
-        var score: Double = rowData["score"] as Double
-        alert.title = rowData["login"] as String
-        
-        alert.message = "Score is \(score)"
-        alert.addButtonWithTitle("Ok")
-        alert.show()
+//        var rowData: NSDictionary = self.tableData[indexPath.row] as NSDictionary
+//        var alert: UIAlertView = UIAlertView()
+//        
+//        var score: Double = rowData["score"] as Double
+//        alert.title = rowData["login"] as String
+//        
+//        alert.message = "Score is \(score)"
+//        alert.addButtonWithTitle("Ok")
+//        alert.show()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         api.searchUserFor("miry")
     }
 
@@ -105,11 +102,17 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     func didReceiveAPIResults(resultsArr: NSArray) {
         dispatch_async(dispatch_get_main_queue(), {
-            self.tableData = resultsArr
+            self.users = User.resultsArr
             self.appsTableView!.reloadData()
         })
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject) {
+        var detailsViewController: DetailsViewController = segue.destinationViewController as DetailsViewController
+        var userIndex = appsTableView!.indexPathForSelectedRow().row
+        var selectedUser = self.users[userIndex]
+        detailsViewController.user = selectedUser
+    }
 
 }
 

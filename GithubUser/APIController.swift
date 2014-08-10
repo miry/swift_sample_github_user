@@ -14,10 +14,9 @@ protocol APIControllerProtocol {
 
 class APIController {
     
-    var delegate: APIControllerProtocol
+    var delegate: APIControllerProtocol?
     
-    init(delegate: APIControllerProtocol) {
-        self.delegate = delegate
+    init() {
     }
     
     func searchUserFor(searchTerm: String) {
@@ -34,7 +33,7 @@ class APIController {
         let url: NSURL = NSURL(string: urlPath)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url, completionHandler: {data, response, error -> Void in
-            if((error) != nil) {
+            if(error) {
                 // If there is an error in the web request, print it to the console
                 println(error.localizedDescription)
             }
@@ -46,7 +45,7 @@ class APIController {
                 println("JSON Error \(err!.localizedDescription)")
             }
             let results: NSArray = jsonResult["items"] as NSArray
-            self.delegate.didReceiveAPIResults(results)
+            self.delegate?.didReceiveAPIResults(results)
         })
         task.resume()
     }
