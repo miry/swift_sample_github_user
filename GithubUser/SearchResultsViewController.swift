@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegate, APIControllerProtocol {
     let kCellIdentifier: String = "SearchResultCell"
 
-    var users = [Album]()
+    var users = [User]()
 
     var imageCache = [String : UIImage]()
 //    var api = APIController()
@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         cell.imageView.image = UIImage(named: "miry.jpg")
 
         // Grab the artworkUrl60 key to get an image URL for the app's thumbnail
-        let urlString: NSString = rowData["avatar_url"] as NSString
+        let urlString: String = userRow.avatarUrl
         
         var image = self.imageCache[urlString]
 
@@ -67,11 +67,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
             })
         }
         
-
-        
-        let url:String  = rowData["html_url"] as String
-        
-        cell.detailTextLabel.text = url
+        cell.detailTextLabel.text = userRow.profileUrl
         
         return cell
     }
@@ -102,7 +98,15 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     func didReceiveAPIResults(resultsArr: NSArray) {
         dispatch_async(dispatch_get_main_queue(), {
-            self.users = User.resultsArr
+            for u in resultsArr {
+                let user:User = User(login: u["login"] as String,
+                                     score: u["score"] as Double,
+                                     avatarUrl: u["avatar_url"] as String,
+                                     profileUrl: u["html_url"] as String)
+
+                self.users.append(user)
+            }
+
             self.appsTableView!.reloadData()
         })
     }
