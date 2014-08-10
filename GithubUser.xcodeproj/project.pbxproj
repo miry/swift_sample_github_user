@@ -13,6 +13,7 @@
 		455563E9199664B900AD9DFC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455563E8199664B900AD9DFC /* Images.xcassets */; };
 		455563F5199664B900AD9DFC /* GithubUserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455563F4199664B900AD9DFC /* GithubUserTests.swift */; };
 		455563FF1996757100AD9DFC /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455563FE1996757100AD9DFC /* APIController.swift */; };
+		459003271997C26700A9828A /* miry.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 459003261997C26700A9828A /* miry.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		455563F3199664B900AD9DFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		455563F4199664B900AD9DFC /* GithubUserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserTests.swift; sourceTree = "<group>"; };
 		455563FE1996757100AD9DFC /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		459003261997C26700A9828A /* miry.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = miry.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		455563D3199664B800AD9DFC = {
 			isa = PBXGroup;
 			children = (
+				459003251997C26700A9828A /* Assets */,
 				455563DE199664B900AD9DFC /* GithubUser */,
 				455563F1199664B900AD9DFC /* GithubUserTests */,
 				455563DD199664B900AD9DFC /* Products */,
@@ -110,6 +113,14 @@
 				455563F3199664B900AD9DFC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		459003251997C26700A9828A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				459003261997C26700A9828A /* miry.jpg */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459003271997C26700A9828A /* miry.jpg in Resources */,
 				455563E7199664B900AD9DFC /* Main.storyboard in Resources */,
 				455563E9199664B900AD9DFC /* Images.xcassets in Resources */,
 			);
