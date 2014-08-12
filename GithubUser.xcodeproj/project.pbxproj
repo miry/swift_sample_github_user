@@ -17,6 +17,7 @@
 		4590032A1997C80600A9828A /* Organization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459003291997C80600A9828A /* Organization.swift */; };
 		4590032D1997C87500A9828A /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590032C1997C87500A9828A /* DetailsViewController.swift */; };
 		4590032F1997C8A100A9828A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4590032E1997C8A100A9828A /* User.swift */; };
+		45DF33B9199A668500009FFC /* gravatar-user-420.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DF33B8199A668500009FFC /* gravatar-user-420.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		459003291997C80600A9828A /* Organization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Organization.swift; sourceTree = "<group>"; };
 		4590032C1997C87500A9828A /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		4590032E1997C8A100A9828A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		45DF33B8199A668500009FFC /* gravatar-user-420.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gravatar-user-420.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		459003251997C26700A9828A /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				45DF33B8199A668500009FFC /* gravatar-user-420.png */,
 				459003261997C26700A9828A /* miry.jpg */,
 			);
 			path = Assets;
@@ -232,6 +235,7 @@
 				459003271997C26700A9828A /* miry.jpg in Resources */,
 				455563E7199664B900AD9DFC /* Main.storyboard in Resources */,
 				455563E9199664B900AD9DFC /* Images.xcassets in Resources */,
+				45DF33B9199A668500009FFC /* gravatar-user-420.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

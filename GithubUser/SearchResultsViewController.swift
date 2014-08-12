@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         cell.textLabel.text = login
         
         // It seems IOS looks to all files, and choose by name.
-        cell.imageView.image = UIImage(named: "miry.jpg")
+        cell.imageView.image = UIImage(named: "gravatar-user-420.png")
 
         // Grab the artworkUrl60 key to get an image URL for the app's thumbnail
         let urlString: String = userRow.avatarUrl
